@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+    <!-- See template _formhelpers.html to understand below -->
+    {% from "includes/_formhelpers.html" import render_field %}
+    <form method="POST" action="">
+        <div class="form-group">
+            {{ render_field(form.userID, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.email, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.age, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.gender, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.major, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.joke_genre, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.joke_type, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.music_genre, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.movie_genre, class="form-control") }}
+        </div>
+        <!--
+        <div class="form-group">
+            {{ render_field(form.username, class="form-control") }}
+        </div>
+        -->
+        <div class="form-group">
+            {{ render_field(form.password, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ render_field(form.confirm, class="form-control") }}
+        </div>
+        <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+    </form>
+{% endblock %}

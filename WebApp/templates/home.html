@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+  <h1>Welcome To ComedAIn</h1>
+  <img src="http://i65.tinypic.com/2e31n3a.png" height="200" width="200">
+  <br/>
+  <p class="lead">An AI that learns your kind of humor. Register or Login to start laughing.</p>
+  {% if session.logged_in == NULL %}
+
+    <a href="/register" class="btn btn-primary btn-lg">Register</a>
+    <a href="/login" class="btn btn-success btn-lg">Login</a>
+  {% endif %}
+</div>
+{% endblock %}

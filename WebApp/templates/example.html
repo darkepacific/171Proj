@@ -1,0 +1,23 @@
+<!-- This is just an example page used for your reference -->
+
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Data Team Members</h1>
+    <ul class="list-group">
+      <!-- for loop for printing out member's names -->
+      {% for article in articles %}
+      <!-- {{articles.var}} draws from data.py -->
+        <li class="list-group-item">{{article.id}}: {{article.author}}</li>
+      {% endfor %}
+    </ul>
+    <H2> Logo </H2>
+    <img src="http://i67.tinypic.com/9kas20.png">
+    <H2> Stars </H2>
+    <img src="http://i65.tinypic.com/fcpich.png">
+    <img src="http://i63.tinypic.com/qrxnqc.png">
+    <H2> Emoji </H2>
+    <img src="http://www.pngall.com/wp-content/uploads/2016/06/Face-with-Tears-of-Joy-Emoji-PNG.png" height=5% width=5%>
+    <H2> Fake Graph </H2>
+    <img src="http://i66.tinypic.com/29n8gt1.png">
+{% endblock %}
